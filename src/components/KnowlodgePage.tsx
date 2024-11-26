@@ -17,7 +17,7 @@ const KnowlodgePage: FC = () => {
   }, []);
 
   return (
-    <div className="p-8 w-[644px] bg-white font-sans">
+    <div className="p-8 w-[644px] ml-24 bg-white font-sans">
       <div className="mb-8">
         <h2 className="text-[24px] font-bold text-black">Билим тесты</h2>
         <div className="w-16 h-[3px] bg-blue-600 mt-2"></div>
