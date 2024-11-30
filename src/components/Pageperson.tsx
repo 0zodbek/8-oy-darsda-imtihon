@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import GaugeChart from './Chart';
+import Gauge from './Gauge';
 
 interface PersonData {
   firstName: string;
@@ -79,8 +79,8 @@ export default function ProfileCard() {
                 <p className="font-medium">{data.index}</p>
               </div>
               <div>
-                <GaugeChart value={0.25} />
-                <p>Норма</p>
+              <Gauge value={30} w-12 h-12/>
+              {/* <p>Норма</p> */}
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function ProfileCard() {
           </div>
         </div>
       ) : (
-        <p className="text-gray-500">Юкланмоқда...</p>
+        <p className="text-gray-500">Kutib turing...</p>
       )}
     </div>
   );

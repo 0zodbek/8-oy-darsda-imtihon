@@ -1,16 +1,18 @@
 import { FC } from 'react'
-import PersonPage from './components/PersonPage';
-import Knowladge from './components/KnowlodgePage'
-import Logo from './assets/logo.svg'
-import gradus from "./assets/78.svg"
+import PersonPage from './components/Pageperson';
+import Knowladge from './components/Know'
+import Gerbs from './assets/logo.svg'
+import Pragment from "./assets/leftGerb.svg"
+import './App.css'
+// import Card from "./components/ui/Card"
 const App: FC = () => {
 
-  return (
+  return ( 
     <div className=''>
       <div className='flex mb-10 w-[1440px] pl-[64px] mx-auto'>
       <div className="w-72 h-13 grid gap-2">
         <img
-          src={Logo}
+          src={Gerbs}
           alt="Logo"
           className="w-16 h-16 object-contain ml-16"
         />
@@ -24,10 +26,10 @@ const App: FC = () => {
        </p>
       </div>
       <div className='mt-10 ml-32'>
-        <img src={gradus} alt="" />
+        <img src={Pragment} alt="" />
       </div>
       </div>
-
+      {/* <Gauge></Gauge> */}
       <PersonPage />
       <Knowladge />
     </div>
@@ -36,19 +38,4 @@ const App: FC = () => {
 
 export default App;
 
-// import React from 'react'
-// import GaugeChart from './components/Chart'
-
-// const App: React.FC = () => {
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-//       <div className="bg-white p-6 rounded-lg shadow-lg">
-//         <h1 className="text-2xl font-bold text-center mb-4">Gauge Chart</h1>
-//         <GaugeChart value={0.55} />
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default App
 

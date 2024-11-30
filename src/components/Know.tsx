@@ -1,12 +1,16 @@
 import { FC, useEffect, useState } from "react";
-
+import LineChart from "./LineChart";
+import ProgressBar from "./ProgressBar";
+import Cart from "./Cart"
+import Card from "./ui/lastPArt"
+import chart from "../assets/chart.svg"
 interface ChartData {
   percentage: number;
   label: string;
   color: string;
 }
 
-const KnowlodgePage: FC = () => {
+const Know: FC = () => {
   const [data, setData] = useState<ChartData[]>([]);
 
   useEffect(() => {
@@ -17,10 +21,10 @@ const KnowlodgePage: FC = () => {
   }, []);
 
   return (
-    <div className="p-8 w-[644px] ml-24 bg-white font-sans">
+    <div className="">
+    <h2 className="text-[28px] font-bold border-s-8 border-[#0956AF] ml-32">Билим тесты</h2>
+      <div className="p-8 w-[1200px] ml-24 bg-transparent font-sans flex">
       <div className="mb-8">
-        <h2 className="text-[24px] font-bold text-black">Билим тесты</h2>
-        <div className="w-16 h-[3px] bg-blue-600 mt-2"></div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {data.map((item, index) => (
@@ -58,9 +62,22 @@ const KnowlodgePage: FC = () => {
           </div>
         ))}
       </div>
+     <div className="h-32 mt-0">
+     <LineChart />
+     <div className="bg-transparent flex items-center justify-center mb-10">
+      <ProgressBar percentage={78} />
     </div>
+     </div>
+     <div className="w-[500px] h-[300px] mt-10">
+      <img src={chart}
+      />
+     </div>
+    </div>
+    <Cart></Cart>
+    <Card></Card>
+      </div>
   );
 };
 
-export default KnowlodgePage;
+export default Know;
  

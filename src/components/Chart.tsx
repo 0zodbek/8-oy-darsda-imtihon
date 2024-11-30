@@ -4,12 +4,12 @@ interface GaugeChartProps {
   value: number;
 }
 
-const GaugeChart: React.FC<GaugeChartProps> = ({ value }) => {
+const Chart: React.FC<GaugeChartProps> = ({ value }) => {
   const angle = 180 * value;
   const gradientId = 'gauge-gradient';
 
   return (
-    <div className="flex flex-col items-center justify-center w-full mx-auto">
+    <div className="flex flex-col items-center justify-center w-[1440px] mx-auto">
       <svg className="w-[43px] h-[28px]" viewBox="0 0 200 120">
         <defs>
           <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
@@ -45,4 +45,4 @@ const GaugeChart: React.FC<GaugeChartProps> = ({ value }) => {
   );
 };
 
-export default GaugeChart;
+export default Chart;
