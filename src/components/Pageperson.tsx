@@ -40,7 +40,7 @@ export default function ProfileCard() {
   }
 
   return (
-    <div className="h-[343px] border p-4 flex items-center justify-center">
+    <div className="h-[343px]  p-4 flex items-center justify-center">
       {data ? (
         <div className="max-w-[1440px] pt-[25px] h-[343px] flex">
           <div>
